@@ -1,0 +1,10 @@
+<h1>counter works!</h1>
+<div class="form-group row">
+  
+    <button (click)="onIncrement()" type="button" class="btn btn-success col-sm-4">increment</button>
+    <button (click)="onDecrement()" type="button" class="btn btn-danger col-sm-4">decrement</button>
+    <button (click)="onReset()" type="button" class="btn btn-info col-sm-4">reset</button>
+
+    <div>Current Count: {{ count$ | async }}</div>
+   
+</div>

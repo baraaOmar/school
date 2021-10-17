@@ -1,0 +1,14 @@
+<p>course works!</p>
+<ul>
+  <ng-container *ngIf="true else notExist" >
+  <li [ngClass]="{'red':true}" [ngClass]="cardClasses()"  *ngFor="let course of courses"  >{{course.id}}</li>
+  <span>{{date|date:'mm/dd/yyyy'}}</span>
+  <br>
+  <span>{{salary|currency:'USD'}}</span>
+  <button (click)="clickMe('hiiiii')" >click mes</button>
+  
+</ng-container>
+</ul>
+<ng-template #notExist >
+ notExist
+</ng-template>
