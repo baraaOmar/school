@@ -1,0 +1,25 @@
+<h1>List of students!</h1>
+
+<div style="max-height: 700px;overflow: scroll;margin-bottom: 200px;">
+    <table class="table">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">name</th>
+                <th scope="col">address</th>
+                <th scope="col">workSheet</th>
+                <th></th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody *ngFor="let student of students">
+            <tr>
+                <td>{{student.name}}</td>
+                <td>{{student.address}}</td>
+                <td>{{student.wokSheetName}}</td>
+                <td><button type="button" class="btn btn-warning"(click)="getStudentCourses(student.id)">show courses</button></td>
+                <td><button type="button" (click)="deleteStudents(student.id)"  class="btn btn-warning">delete course</button></td>
+                <!---(click)="getStudentCourses(student.id)"-->
+            </tr>
+        </tbody>
+    </table>
+</div>

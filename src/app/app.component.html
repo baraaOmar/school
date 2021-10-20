@@ -303,12 +303,19 @@
   }
 </style>
 
-<div class="content" role="main">
-<!-- <input [value]="welcome" (keyup)="onKeyUp(textInput.value)" #textInput > 
-  <app-course   ></app-course> --->
-    <app-student ></app-student>
-<app-counter></app-counter>
+<div class="container" role="main">
+  <div class="row">
+  <!-- <input [value]="welcome" (keyup)="onKeyUp(textInput.value)" #textInput > 
+  <app-course   ></app-course> 
+   <app-student ></app-student>
+  --->
+ 
+ 
+  <router-outlet></router-outlet>
 
+
+  <!---<app-counter></app-counter> ---->
+</div>
 </div>
 
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->

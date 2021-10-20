@@ -1,9 +1,9 @@
 export interface Student {
-    id: Int16Array;
+    id?: number;
     name:string;
     wokSheetName:string;
     address:string;
-    courses:Array<string>
+    courses?:Array<string>
     
    
 }

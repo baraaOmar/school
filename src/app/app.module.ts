@@ -11,19 +11,31 @@ import { StoreModule } from '@ngrx/store';
 import { counterReducer } from './counter/state/counter.reducer';
 import { CounterOutputComponent } from './counter-output/counter-output.component';
 import { studentsReducer } from './counter/state/student.reducer';
+import { EffectsModule } from '@ngrx/effects';
+import { StudentsEffects } from './student/student.effects';
+import { HeaderComponent } from './header/header.component';
+import { AddStudentComponent } from './add-student/add-student.component';
+import { UpdateStudentComponent } from './update-student/update-student.component';
+import { StudentsComponent } from './students/students.component';
+import { AppRoutingModule } from './app.routing.module';
 @NgModule({
   declarations: [
     AppComponent,
     CourseComponent,
     StudentComponent,
     CounterComponent,
-    CounterOutputComponent
+    CounterOutputComponent,
+    
   ],
   imports: [
     HttpClientModule,
     BrowserModule,
+    AppRoutingModule,
     FormsModule,
-    StoreModule.forRoot({counter:counterReducer,studentsReducer})
+    StoreModule.forFeature("students", studentsReducer),
+    StoreModule.forRoot({}, {}),
+    EffectsModule.forRoot([]),
+    EffectsModule.forFeature([StudentsEffects]),
   ],
   providers: [],
   bootstrap: [AppComponent]
